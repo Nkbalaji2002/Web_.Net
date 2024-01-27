@@ -28,3 +28,4 @@
 /home/nithish/Desktop/Software/Learn_Dotnet/NET_code/ASP/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb
 /home/nithish/Desktop/Software/Learn_Dotnet/NET_code/ASP/WebApplication1/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
 /home/nithish/Desktop/Software/Learn_Dotnet/NET_code/ASP/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/nithish/Desktop/Software/Learn_Dotnet/NET_code/ASP/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json

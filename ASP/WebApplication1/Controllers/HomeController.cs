@@ -4,42 +4,28 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers;
 
-public class HomeController : Controller
+public class HomeController(ILogger<HomeController> logger) : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+    private readonly ILogger<HomeController> _logger = logger;
 
     public IActionResult Index()
     {
-        // dummy data for demonstration
-        var products = new List<Product>
-        {
-            new Product {
-                Id = 1,
-                Name = "Laptop",
-                Price = 999.99M
-            },
-            new Product {
-                Id = 2,
-                Name = "SmartPhones",
-                Price = 499.99M
-            },
-            new Product {
-                Id = 3,
-                Name = "SmartPhones",
-                Price = 499.99M
-            },
-            new Product {
-                Id = 4,
-                Name = "Airpods",
-                Price = 199.99M
-            }
-        };
-        return View(products);
+        // return Content("Welcome to the Home Page!");
+        ViewData["Message"] = "Welcome to ASP.NET MVC!";
+        return View();
+    }
+
+    public IActionResult About() {
+        // return Content("This is the About Page.");
+        ViewData["Message"] = "Your application description page.";
+        return View();
+    }
+
+    public IActionResult Contact() {
+        // return Content("You can contact us at contact@example.com.");
+        ViewBag.Message = "Your contact page.";
+        return View();
+
     }
 
     public IActionResult Privacy()
