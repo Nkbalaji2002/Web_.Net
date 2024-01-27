@@ -33,6 +33,11 @@ public class HomeController : Controller
                 Name = "SmartPhones",
                 Price = 499.99M
             },
+            new Product {
+                Id = 4,
+                Name = "Airpods",
+                Price = 199.99M
+            }
         };
         return View(products);
     }
