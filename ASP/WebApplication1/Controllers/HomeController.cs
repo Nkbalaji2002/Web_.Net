@@ -28,6 +28,34 @@ public class HomeController(ILogger<HomeController> logger) : Controller
 
     }
 
+    public IActionResult Product() {
+        ViewBag.Message = "Product Lists";
+        var products = new List<Product>
+        {
+            new Product {
+                Id = 1,
+                Name = "Laptops",
+                Price = 999.99M                
+            },
+            new Product {
+                Id = 2,
+                Name = "SmartPhones",
+                Price = 599.99M                
+            },
+            new Product {
+                Id = 3,
+                Name = "HeadPhones",
+                Price = 79.99M                
+            },
+            new Product {
+                Id = 4,
+                Name = "AirPods",
+                Price = 149.99M
+            }
+        };
+        return View(products);
+    }
+
     public IActionResult Privacy()
     {
         return View();

@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Products";
+}
+
+@model List<Product>
+<h1>
+    @ViewBag.Message
+</h1>
+<ul>
+    @foreach(var product in Model)
+    {
+        <li>
+            @product.Name - $@product.Price
+        </li>
+    }
+</ul>
